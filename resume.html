@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colton Randolph - Content & SEO Strategist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --page-bg: #F8F9FA;
+            --main-bg: #FFFFFF;
+            --text-primary: #212529;
+            --text-secondary: #495057;
+            --brand-color: #2563EB;
+            --border-color: #DEE2E6;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--page-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 2rem auto;
+            padding: 3rem;
+            background-color: var(--main-bg);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 6px;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+        }
+        
+        .header h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            margin: 0 0 0.5rem 0;
+            color: var(--text-primary);
+        }
+
+        .header .job-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--brand-color);
+            margin: 0 0 1.5rem 0;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--brand-color);
+            text-decoration: underline;
+        }
+        
+        /* Sections */
+        .section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .section-heading {
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--brand-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .summary p {
+            font-size: 1rem;
+            margin: 0;
+            color: var(--text-secondary);
+        }
+        
+        /* Experience */
+        .experience-item {
+            margin-bottom: 2rem;
+        }
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.25rem;
+        }
+        .experience-header h4 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        .experience-header .date {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .company-name {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .experience-item ul {
+            list-style-position: outside;
+            padding-left: 1.25rem;
+            margin: 0;
+        }
+        
+        .experience-item li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Competencies */
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .competency-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem 0;
+        }
+        
+        .competency-item p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Education */
+        .education-item h4 {
+             font-size: 1.15rem;
+             font-weight: 600;
+             margin: 0;
+        }
+        .education-item p {
+            margin: 0.25rem 0 0 0;
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+
+        @media (max-width: 768px) {
+            .resume-container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            .header h1 { font-size: 2.25rem; }
+            .header .job-title { font-size: 1.1rem; }
+            .contact-info {
+                flex-direction: column;
+                gap: 0.75rem;
+                align-items: center;
+            }
+            .competencies-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media print {
+            body {
+                background-color: #fff;
+            }
+            .resume-container {
+                box-shadow: none;
+                margin: 0;
+                padding: 1rem;
+                border-radius: 0;
+            }
+            :root {
+                --page-bg: #FFFFFF;
+                --main-bg: #FFFFFF;
+                --text-primary: #000000;
+                --text-secondary: #333333;
+                --brand-color: #000000;
+                --border-color: #DDDDDD;
+            }
+            .header .job-title { color: #333; }
+            .section-heading { color: #000; }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <header class="header">
+            <h1>Colton Randolph</h1>
+            <p class="job-title">B2B Tech Content Writer & SEO Strategist</p>
+            <ul class="contact-info">
+                <li><a href="mailto:cr@coltonrandolph.com">cr@coltonrandolph.com</a></li>
+                <li>Wichita, KS</li>
+                <li><a href="https://linkedin.com/in/colton-randolph" target="_blank" rel="noopener noreferrer">linkedin.com/in/colton-randolph</a></li>
+                <li><a href="https://coltonrandolph.com" target="_blank" rel="noopener noreferrer">coltonrandolph.com (Portfolio & Case Studies)</a></li>
+            </ul>
+        </header>
+
+        <main>
+            <section class="section summary">
+                <h3 class="section-heading">Professional Summary</h3>
+                <p>
+                    Content and SEO strategist with 9+ years of experience building scalable organic growth engines for B2B tech and SaaS companies. With a unique founder's perspective, I develop and execute data-driven content strategies that turn search into a predictable revenue stream. Proven ability to translate complex technical topics into high-performing content that drives traffic, establishes market authority, and converts customers.
+                </p>
+            </section>
+
+            <section class="section experience">
+                <h3 class="section-heading">Professional Experience</h3>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h4>SEO/Technical Content Writer</h4>
+                        <p class="date">Oct 2023 - Present</p>
+                    </div>
+                    <p class="company-name">xTom | Contract</p>
+                    <ul>
+                        <li>Drove a 2300% peak increase in organic traffic over 24 months, growing from ~300 to over 7,500 monthly visitors through a targeted technical content strategy.</li>
+                        <li>Authored 90+ in-depth technical articles on IaaS, virtualization, and Linux, establishing the company as a market authority and securing 450+ top-10 keyword rankings.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h4>Technical Writer</h4>
+                        <p class="date">Aug 2023 - Oct 2024</p>
+                    </div>
+                    <p class="company-name">Proxycurl | Full-time</p>
+                    <ul>
+                        <li>Increased organic pageviews by 324%, generating 1.9 million total pageviews over 15 months by executing a full-funnel SEO and content plan.</li>
+                        <li>Achieved #1 Google ranking for high-intent keywords like "linkedin data scraper" and secured 333+ top-3 keyword positions for commercial and technical terms.</li>
+                        <li>Wrote over 30 long-form technical articles and API tutorials that improved developer onboarding and increased product activation rates.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h4>Email & Website Copywriter</h4>
+                        <p class="date">Aug 2021 - Jul 2023</p>
+                    </div>
+                    <p class="company-name">The Happier Hustle | Contract</p>
+                    <ul>
+                        <li>Developed an empathy-first, multi-channel content strategy that generated thousands of qualified leads and consistently increased program enrollment.</li>
+                        <li>Grew an engaged and supportive Facebook community to over 6,400 members using trauma-informed copywriting for a sensitive healthcare audience.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h4>Founder</h4>
+                        <p class="date">Sep 2016 - Sep 2017</p>
+                    </div>
+                    <p class="company-name">Cart Grab | Full-time</p>
+                    <ul>
+                        <li>Founded and scaled an eCommerce SaaS platform from concept to customer acquisition with a $0 ad spend by pioneering a content-first GTM strategy.</li>
+                        <li>Validated, funded, and launched the product by building an audience and pre-selling lifetime deals, managing the full product and marketing lifecycle.</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h4>Freelance Copywriting & SEO Services</h4>
+                        <p class="date">May 2016 - Present</p>
+                    </div>
+                    <p class="company-name">Clients include: Email Engineers, MyServiceArea, Sqribble, Woop Insurance</p>
+                    <ul>
+                        <li>Provided full-funnel content marketing, direct response copywriting, and SEO services to a diverse range of B2B and B2C clients to drive leads and sales.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section competencies">
+                 <h3 class="section-heading">Core Competencies</h3>
+                 <div class="competencies-grid">
+                     <div class="competency-item">
+                         <h4>SEO & Strategy</h4>
+                         <p>Technical SEO, Full-Funnel Content Strategy, Keyword Research, "Search Everywhere Optimization", Link Building, Competitor Audits.</p>
+                     </div>
+                      <div class="competency-item">
+                         <h4>Content & Copywriting</h4>
+                         <p>Technical Writing (APIs, IaaS, SaaS), B2B Content Marketing, Long-Form Articles, API Documentation, Conversion Copywriting, Email Marketing, Graphic Design (Blog Images).</p>
+                     </div>
+                      <div class="competency-item">
+                         <h4>Technical Acumen</h4>
+                         <p>IaaS & Hosting, Virtualization, REST APIs, Web Scraping, Python, Docker, Linux, B2B Sales Intelligence, HTML/CSS, WordPress, Ahrefs, SEMrush, Ubersuggest, Screaming Frog.</p>
+                     </div>
+                      <div class="competency-item">
+                         <h4>Marketing & Growth</h4>
+                         <p>Content-Led Growth, Product-Led Storytelling, Community Building, Bootstrapped GTM Strategy, Paid Social (Content Promotion).</p>
+                     </div>
+                 </div>
+            </section>
+
+            <section class="section education">
+                <h3 class="section-heading">Education</h3>
+                <div class="education-item">
+                    <h4>Wichita State University</h4>
+                    <p>Bachelor of Business Administration (BBA), Marketing | Minor in Management</p>
+                    <p>Graduated: May 2025</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>
